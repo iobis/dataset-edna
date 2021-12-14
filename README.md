@@ -52,6 +52,7 @@ interactions in a marine community](https://www.nature.com/articles/s41467-019-1
 +-- README.md                   :Description of this repository
 +-- LICENSE                     :Repository license
 +-- .gitignore                  :Files and directories to be ignored by git
++-- environment.yml             :Conda environment configuration file for Binder
 |
 +-- raw
 |   +-- asv_table.csv           :Source data containing ASV sequences and number of reads
