@@ -1,6 +1,8 @@
 # dataset-edna
 By [Diana LaScala-Gruenewald](https://github.com/dianalg)
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/iobis/dataset-edna/HEAD?labpath=src%2Fconversion_code.ipynb)
+
 ## Introduction
 **Rationale:**
 
