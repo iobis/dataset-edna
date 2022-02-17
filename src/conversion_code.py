@@ -127,15 +127,16 @@ occ['eventDate'] = eventDate
 
 # Clean columns
 occ['sop'] = occ['sop'].str.replace('|', ' | ', regex=False)
+occ['seq_meth'] = 'Illumina MiSeq 2x250'
 occ = occ.rename(columns={'primer_sequence_forward': 'pcr_primer_forward',
                           'primer_sequence_reverse': 'pcr_primer_reverse'})
 
 # Add extension terms that weren't in metadata file (obtained by asking data provider)
 occ['target_subfragment'] = 'V9'
 occ['lib_layout'] = 'paired'
-occ['otu_class_appr'] = 'dada2;version;ASV'
-occ['otu_seq_comp_appr'] = 'blast;version;80% identity | MEGAN6;version; bitscore:100:2%'  # Needs to be updated
-occ['otu_db'] = 'Genbank nr;221'  # Needs to be updated
+occ['otu_class_appr'] = 'dada2;1.14.0;ASV'  # Needs to be updated
+occ['otu_seq_comp_appr'] = 'blast;2.9.0+;80% identity;e-value cutoff: 0.00001 | MEGAN6;6.18.5;bitscore:100:2%'
+occ['otu_db'] = 'Genbank nr;221'
 
 # Create an occurrenceID that will uniquely identify each ASV observed within a water sample
 occ['occurrenceID'] = plate.groupby('Sequence_ID')['ASV'].cumcount()+1
